@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Jenkins Project" default="all">
+<property name="MyProject" value="C:/MyProject/"/>
+
+<target name="clean">
+<echo message="cleaning"></echo>
+</target>
+
+<target name="init" depends="clean">
+<echo message="Initailizing"></echo>
+<mkdir dir="${MyProject}"/>
+
+</target>
+
+<target name="copy" depends="init">
+<echo message="copying"></echo>
+</target>
+
+<target name="compile" depends="copy">
+<echo message="compiling"></echo>
+</target>
+
+<target name="test" depends="compile">
+<echo message="testing"></echo>
+</target>
+
+<target name="report" depends="test">
+<echo message="reporting"></echo>
+</target>
+
+<target name="docs" depends="report">
+<echo message="Documentation"></echo>
+</target>
+
+<target name="package" depends="docs">
+<echo message="Packaging"></echo>
+</target>
+
+<target name="deploy" depends="package">
+<echo message="deploying"></echo>
+</target>
+
+<target name="All" depends="deploy">
+<echo message="Welcome to ANT build file"></echo>
+</target>
+
+
+</project>
