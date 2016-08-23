@@ -44,8 +44,6 @@
 <target name="All" depends="deploy">
 <echo message="Welcome to ANT build file"></echo>
 </target>
-	
-	<target>
 
 
 </project>
